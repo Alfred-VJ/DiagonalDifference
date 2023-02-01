@@ -22,20 +22,16 @@ Por último, se utiliza el método Abs de la clase Math para obtener la diferenc
 ```C#
  static int DiagonalDifference(int[,] arr)
         {
-            // Primero obtenemos la longitud de la primera dimención
             int n = arr.GetLength(0);
-            // Definimos las variables que contendran el valor de la suma de las diagonales
             int upDiagonal = 0;
             int downDiagonal = 0;
 
             for(int i = 0; i < n; i++)
             {
-                //Sumamos los indices 0,0 + 1,1 + 2,2
                 upDiagonal += arr[i, i];
-                //Sumamos los indices 0,2 + 1,1 + 2,0
                 downDiagonal += arr[i, n - i - 1];
             }
-            //Utilizamos el método Abs de la clase Math para obtener la diferencia absoluta.
+           
             return Math.Abs(upDiagonal - downDiagonal);
         }
         
