@@ -22,10 +22,10 @@
             {
                 //Sumamos los indices 0,0 + 1,1 + 2,2
                 upDiagonal += arr[i, i];
-                //Sumamos los indeces 0,2 + 1,1 + 2,0
+                //Sumamos los indices 0,2 + 1,1 + 2,0
                 downDiagonal += arr[i, n - i - 1];
             }
-            //Utilizamos el metodo Abs para obtener la diferencia absoluta.
+            //Utilizamos el método Abs de la clase Math para obtener la diferencia absoluta.
             return Math.Abs(upDiagonal - downDiagonal);
         }
     
